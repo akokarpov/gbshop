@@ -68,6 +68,7 @@
     </header>
     <main>
         <section class="brand">
+            <!-- При уменьшении масштаба страницы до минимального картинка уезжает влево. Буду рад вашему комментарию, как это исправить. Или так и задумано было? -->
             <img src="./img/man.jpg" alt="man" width="800" height="765">
             <div class="brand__title_wrapper">
                 <h1 class="brand__title">the brand <span class="brand__subtitle">of luxerious <span
@@ -103,7 +104,7 @@
             <ul class="products__list">
                 <li class="products__item">
                     <img src="./img/featured_man_01.jpg" alt="featured_man_01" width="360" height="420">
-                    <div class="products__items_wrapper">
+                    <div class="products__item_wrapper">
                         <h3 class="products__item_title">ellery x m'o capsule</h3>
                         <p class="products__item_text">Known for her sculptural takes on traditional tailoring,
                             Australian arbiter of cool Kym Ellery
@@ -113,7 +114,7 @@
                 </li>
                 <li class="products__item">
                     <img src="./img/featured_woman_01.jpg" alt="featured_woman_01" width="360" height="420">
-                    <div class="products__items_wrapper">
+                    <div class="products__item_wrapper">
                         <h3 class="products__item_title">ellery x m'o capsule</h3>
                         <p class="products__item_text">Known for her sculptural takes on traditional tailoring,
                             Australian arbiter of cool Kym Ellery
@@ -123,7 +124,7 @@
                 </li>
                 <li class="products__item">
                     <img src="./img/featured_kid.jpg" alt="featured_kid" width="360" height="420">
-                    <div class="products__items_wrapper">
+                    <div class="products__item_wrapper">
                         <h3 class="products__item_title">ellery x m'o capsule</h3>
                         <p class="products__item_text">Known for her sculptural takes on traditional tailoring,
                             Australian arbiter of cool Kym Ellery
@@ -133,7 +134,7 @@
                 </li>
                 <li class="products__item">
                     <img src="./img/featured_man_02.jpg" alt="featured_man_02" width="360" height="420">
-                    <div class="products__items_wrapper">
+                    <div class="products__item_wrapper">
                         <h3 class="products__item_title">ellery x m'o capsule</h3>
                         <p class="products__item_text">Known for her sculptural takes on traditional tailoring,
                             Australian arbiter of cool Kym Ellery
@@ -143,7 +144,7 @@
                 </li>
                 <li class="products__item">
                     <img src="./img/featured_woman_02.jpg" alt="featured_woman_02" width="360" height="420">
-                    <div class="products__items_wrapper">
+                    <div class="products__item_wrapper">
                         <h3 class="products__item_title">ellery x m'o capsule</h3>
                         <p class="products__item_text">Known for her sculptural takes on traditional tailoring,
                             Australian arbiter of cool Kym Ellery
@@ -153,7 +154,7 @@
                 </li>
                 <li class="products__item">
                     <img src="./img/featured_woman_03.jpg" alt="featured_woman_03" width="360" height="420">
-                    <div class="products__items_wrapper">
+                    <div class="products__item_wrapper">
                         <h3 class="products__item_title">ellery x m'o capsule</h3>
                         <p class="products__item_text">Known for her sculptural takes on traditional tailoring,
                             Australian arbiter of cool Kym Ellery
@@ -167,7 +168,7 @@
             </div>
         </section>
         <section class="benefits">
-            <!-- Нужнj добавить следующую строку для SEO? -->
+            <!-- Нужно добавить следующую строку для SEO? -->
             <h2 class="visually-hidden">Benefits</h2>
             <div class="container">
                 <ul class="benefits__list">
@@ -197,23 +198,41 @@
         </section>
     </main>
     <footer>
-        <section class="subsribe">
-            <div class="subscribe__wrapper">
-                <img src="./img/face_subscribe.png" alt="face-img" width="96" height="96">
-                <p>“vestibulum quis porttitor dui! quisque viverra nunc mi, a pulvinar purus condimentum“</p>
-                <form action="#">
-                    <h2>subscribe</h2>
-                    <p>for our newsletter and promotion</p>
-                    <input type="email" placeholder="enter your email">
-                    <button type="submit">subscribe</button>
+        <section class="subscribe">
+            <div class="subscribe__wrapper container">
+                <div class="subscribe__testimonial">
+                    <img class="subscribe__testimonial_face" src="./img/face_subscribe.png" alt="face_subscribe"
+                        width="96" height="96">
+                    <p class="subscribe__testimonial_text">“vestibulum quis porttitor dui! quisque viverra nunc mi, a
+                        pulvinar purus condimentum“</p>
+                </div>
+                <form class="subscribe__form" action="#">
+                    <h2 class="subscribe__form_title">subscribe</h2>
+                    <p class="subscribe__form_subtitle">for our newsletter and promotion</p>
+                    <div class="subscribe__form_wrapper">
+                        <input class="subscribe__input_style" type="email" placeholder="    Enter Your Email">
+                        <button class="subscribe__button_style" type="submit">subscribe</button>
+                    </div>
                 </form>
             </div>
         </section>
-        &copy; 2021 brand all rights reserved.
-        <a href="#">facebook-pic</a>
-        <a href="#">inst-pic</a>
-        <a href="#">pin-pic</a>
-        <a href="#">twitter-pic</a>
+        <section class="footer">
+            <div class="footer__wrapper container">
+                <div class="footer__copy">
+                    &copy; 2021 brand all rights reserved.
+                </div>
+                <div class="footer__iconset">
+                    <a href="#"><img class="footer__iconset_facebook" src="./img/facebook.jpg" alt="facebook" width="32"
+                            height="32"></a>
+                    <a href="#"><img class="footer__iconset_instagram" src="./img/instagram.jpg" alt="instagram"
+                            width="32" height="32"></a>
+                    <a href="#"><img class="footer__iconset_pinterest" src="./img/pinterest.jpg" alt="pinterest"
+                            width="32" height="32"></a>
+                    <a href="#"><img class="footer__iconset_twitter" src="./img/twitter.jpg" alt="twitter" width="32"
+                            height="32"></a>
+                </div>
+            </div>
+        </section>
     </footer>
 </body>
 
