@@ -12,6 +12,8 @@
     --header-icon-gray:#E8E8E8;
     --overlay-color: rgba(0, 0, 0, 0.2);
     --input-back-gray: #E1E1E1;
+    --registration-back: #F8F3F4;
+    --border-input-fields: #A4A4A4;
 }
 
 body {
@@ -47,12 +49,8 @@ body {
     position: relative;
 }
 
-.header__logo {
+.header__logo_theme {
     margin: 0 41px 0 0;
-}
-
-.header__search {
-    margin: 0 0 0 41px;
 }
 
 .header__button {
@@ -360,7 +358,12 @@ body {
     font-family: Lato;
     margin: 0 0 95.5px 0;
     padding: 0;
+    outline: 0;
 }
+
+.products__button_theme:active {
+    transform: scale(0.9);
+ }
 
 .products__button_theme:hover {
     background-color: var(--dark-pink);
@@ -475,16 +478,12 @@ body {
     border-bottom-left-radius: 25px;
     border: none;
     background-color: var(--input-back-gray);
+    padding: 0 0 0 20px;
+    outline: none;
 }
 
 .footer__subscribe_input_theme:hover {
     background-color: var(--white);
-}
-
-::placeholder {
-    font-size: 14px;
-    line-height: 17px;
-    padding: 0 0 0 22px;
 }
 
 :focus::-webkit-input-placeholder {
@@ -503,7 +502,16 @@ body {
     text-transform: capitalize;
     font-size: 14px;
     font-family: Lato;
+    outline: none;
 }
+
+.footer__subscribe_button_theme:active {
+    transform: scale(0.9);
+ }
+
+ .footer__subscribe_button_theme:hover {
+    opacity: 0.5;
+ }
 
 .footer__bottom_background_theme {
     min-height: 80px;
@@ -553,4 +561,157 @@ body {
 
 .footer_icon_container_pinterest {
     margin: 0;
+}
+
+.registration__banner_theme {
+    display: flex;
+    align-items: center;
+    min-height: 148px;
+    background-color: var(--registration-back);
+}
+
+.registration_heading {
+    color: var(--dark-pink);
+    text-transform: uppercase;
+    font-size: 24px;
+    line-height: 29px;
+    font-weight: 400;
+}
+
+.registration_main {
+    display: flex;
+}
+
+.registration__form {
+    width: 360px;
+    margin: 64px 129px 96px 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.registration_fieldset {
+    border:none;
+}
+
+.registration_legend {
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 19px;
+    color: var(--dark-blue);
+    text-transform: capitalize;
+    margin: 0 0 20px 0;
+}
+
+.registration__input_field {
+    width: 360px;
+    min-height: 44px;
+    margin: 0 0 20px 0;
+    border: 1px solid var(--border-input-fields);
+    padding: 0 0 0 20px;
+}
+
+.registration_gender_select {
+    margin: 13px 0 30px 0;
+    display: flex;
+    align-items: center;
+}
+
+.registration_radio {
+    display: none;
+}
+
+.registration_radio_label {
+    position: relative;
+    margin: 0 0 0 20px;
+    font-size: 11px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 17px;
+    text-transform: capitalize;
+    padding: 0 20px 0 10px;
+}
+
+.registration_radio_label::before {
+    position: absolute;
+    content: '';
+    width: 17px;
+    height: 17px;
+    border: 1px solid var(--border-input-fields);
+    border-radius: 50%;
+    left: -20px;
+}
+
+.registration_radio:checked+.registration_radio_label::before {
+    background: var(--border-input-fields);
+}
+
+.registration__input_field_last {
+    margin-bottom: 15px;
+}
+
+.registration_text {
+    font-size: 13px;
+    font-weight: 300;
+    line-height: 16px;
+    color: var(--border-input-fields);
+    margin: 0 0 39px 0;
+}
+
+.registration_button_theme {
+    background-image: url(..//img/arrow_reg_button.svg);
+    background-repeat: no-repeat;
+    background-position: 121px;
+    height: 50px;
+    width: 167px;
+    border-radius: 0px;
+    background-color: transparent;
+    background-color: var(--dark-pink);
+    border: 1px solid var(--dark-pink);
+    color: var(--white);
+    text-transform: uppercase;
+    font-family: Lato;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 17px;
+    padding: 0 40px 0 0;
+}
+
+.registration_button_theme:active {
+    transform: scale(0.9);
+}
+
+.registration__benefits {
+    margin: 64px 0 0 0;
+}
+
+.registration__benefits_heading,
+.registration_benefits_text,
+.registration_list_point {
+    font-size: 24px;
+    font-weight: 300;
+    line-height: 29px;
+}
+
+.registration__benefits_heading {
+    text-transform: uppercase;
+    margin: 0 0 22px 0;
+}
+
+.registration_benefits_text {
+    margin: 0 0 21px 0;
+}
+
+.registration_list_point {
+    margin: 0 0 16px 40px;
+    position: relative;
+}
+
+.registration_list_point::before {
+    position: absolute;
+    content: "";
+    background-image: url(../img/checked.svg);
+    width: 20px;
+    height: 16px;
+    left: -42px;
+    top: 7px;
 }
