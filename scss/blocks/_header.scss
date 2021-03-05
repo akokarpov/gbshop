@@ -1,0 +1,86 @@
+.header {
+    position: relative;
+
+    &_theme_dark_blue {
+        background-color: $dark-blue;
+        position: relative;
+    }
+
+    &__logo_theme {
+        margin: 0 41px 0 0;
+    }
+
+    &__button {
+        background-color: transparent;
+        border: none;
+        margin: 0 34px 0 0;
+    }
+
+    &__profile {
+        margin: 0 34px 0 0;
+    }
+
+    &__icon_fill_color {
+        fill: $header-icon-gray;
+    }
+
+    &__menu:hover,
+    &__search:hover,
+    &__profile:hover,
+    &__cart:hover {
+    fill: $dark-pink;
+    }
+
+    &__wrapper {
+        display: flex;
+        align-items: center;
+        min-height: 75px;
+        justify-content: space-between;
+    }
+
+    &__navigation {
+        position: absolute;
+        left: 1368px;
+        min-height: 764px;
+        width: 232px;
+        background-color: $white;
+        display: none;
+    }
+
+    &__navigation_display_block {
+        display: block;
+    }
+
+    &__navigation_button {
+        border: none;
+        text-transform: uppercase;
+        font-size: 12px;
+        margin: 16px 16px 9px 204px;
+    }
+
+    &__nav_title {
+        @include font(16px, 17px, 700);
+        text-transform: uppercase;
+        margin: 0 0 24px 34px;
+    }
+
+    &__nav_subtitle_pink {
+        color: $dark-pink;
+        margin: 20px 0 12px 34px;
+    }
+
+    &__nav_link {
+        @include font(14px, 17px);
+        text-transform: capitalize;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 17px;
+        color: $nav-text-gray;
+        text-decoration: none;
+    }
+
+    &.header__nav_list {
+        margin: 12px 0 12px 54.5px;
+    }
+    
+}
