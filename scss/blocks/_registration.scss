@@ -1,0 +1,150 @@
+.registration {
+    
+    &__banner_theme {
+        display: flex;
+        align-items: center;
+        min-height: 148px;
+        background-color: $registration-back;
+    }
+    
+    &_heading {
+        @include font(24px, 29px);
+        color: $dark-pink;
+        text-transform: uppercase;
+    }
+    
+    &_main {
+        display: flex;
+    }
+    
+    &__form {
+        width: 360px;
+        margin: 64px 129px 96px 0;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    &_fieldset {
+        border:none;
+    }
+    
+    &_legend {
+        @include font(16px, 19px, 300);
+        color: $dark-blue;
+        text-transform: capitalize;
+        margin: 0 0 20px 0;
+    }
+    
+    &__input_field {
+        width: 360px;
+        min-height: 44px;
+        margin: 0 0 20px 0;
+        border: 1px solid $border-input-fields;
+        padding: 0 0 0 20px;
+    }
+
+    :focus::-webkit-input-placeholder {
+        color: transparent;
+    }
+    
+    &_gender_select {
+        margin: 13px 0 30px 0;
+        display: flex;
+        align-items: center;
+    }
+    
+    &_radio {
+        display: none;
+    }
+    
+    &_radio_label {
+        @include font(11px, 17px, 300);
+        position: relative;
+        margin: 0 0 0 20px;
+        text-transform: capitalize;
+        padding: 0 20px 0 10px;
+    }
+    
+    &_radio_label::before {
+        width: 17px;
+        height: 17px;
+        position: absolute;
+        content: '';
+        border: 1px solid $border-input-fields;
+        border-radius: 50%;
+        left: -20px;
+    }
+    
+    &_radio:checked+&_radio_label::before {
+        background-image: url(../img/checked.svg);
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: 10px 10px;
+    }
+    
+    &__input_field_last {
+        margin-bottom: 15px;
+    }
+    
+    &_text {
+        @include font(13px, 16px, 300);
+        color: $border-input-fields;
+        margin: 0 0 39px 0;
+    }
+    
+    &_button_theme {
+        background-image: url(..//img/arrow_reg_button.svg);
+        background-repeat: no-repeat;
+        background-position: 121px;
+        height: 50px;
+        width: 167px;
+        border-radius: 0px;
+        background-color: transparent;
+        background-color: $dark-pink;
+        border: 1px solid $dark-pink;
+        color: $white;
+        text-transform: uppercase;
+        font-family: Lato;
+        @include font(14px, 17px);
+        padding: 0 40px 0 0;
+        outline: none;
+    }
+    
+    &_button_theme:active {
+        transform: scale(0.9);
+    }
+    
+    &__benefits {
+        margin: 64px 0 0 0;
+    }
+    
+    &__benefits_heading,
+    &_benefits_text,
+    &_list_point {
+        @include font(24px, 29px, 300);
+    }
+    
+    &__benefits_heading {
+        text-transform: uppercase;
+        margin: 0 0 22px 0;
+    }
+    
+    &_benefits_text {
+        margin: 0 0 21px 0;
+    }
+    
+    &_list_point {
+        margin: 0 0 16px 40px;
+        position: relative;
+    }
+    
+    &_list_point::before {
+        position: absolute;
+        content: "";
+        background-image: url(../img/checked.svg);
+        width: 20px;
+        height: 16px;
+        left: -42px;
+        top: 7px;
+    }
+}

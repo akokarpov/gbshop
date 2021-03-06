@@ -1,0 +1,152 @@
+.footer {
+
+    &__subscribe_background_theme {
+        background-image: url(../img/back_subscribe.jpg);
+        min-height: 448px;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    
+    &__subscribe_flex {
+        display: flex;
+        align-items: center;
+        justify-content:flex-start;
+        min-height: 448px;
+    }
+    
+    &__subscribe_testimonial {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 360px;
+        margin: 0 223px 0 0;
+    }
+    
+    &__subscribe_image {
+        margin: 0 0 40px 0;
+    }
+    
+    &__subscribe_text {
+        font-size: 20px;
+        font-style: italic;
+        line-height: 24px;
+        text-align: center;
+    }
+    
+    &__subscribe_form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 557px;
+    }
+    
+    &__subscribe_form_title {
+        @include font(24px, 38px, 700);
+        text-transform: uppercase;
+        text-align: center;
+    }
+    
+    &__subscribe_form_subtitle {
+        @include font(18px, 30px);
+        text-transform: uppercase;
+        text-align: center;
+        margin: 0 0 32px 0;
+    }
+    
+    &__subscribe_email_flex {
+        display: flex;
+        align-items: center;
+    }
+    
+    &__subscribe_input_theme {
+        height: 50px;
+        width: 256px;
+        border-top-left-radius: 25px;
+        border-bottom-left-radius: 25px;
+        border: none;
+        background-color: $input-back-gray;
+        padding: 0 0 0 20px;
+        outline: none;
+    }
+    
+    &__subscribe_input_theme:hover {
+        background-color: $white;
+    }
+    
+    :focus::-webkit-input-placeholder {
+        color: transparent;
+    }
+    
+    &__subscribe_button_theme {
+        display:inline-block;
+        height: 50px;
+        width: 100px;
+        border-top-right-radius: 25px;
+        border-bottom-right-radius: 25px;
+        background-color: $dark-pink;
+        border: none;
+        color: $white;
+        text-transform: capitalize;
+        font-size: 14px;
+        font-family: Lato;
+        outline: none;
+    }
+    
+    &__subscribe_button_theme:active {
+        transform: scale(0.9);
+     }
+    
+     &__subscribe_button_theme:hover {
+        opacity: 0.5;
+     }
+    
+    &__bottom_background_theme {
+        min-height: 80px;
+        background-color: $dark-blue;
+        color: $gray;
+    }
+    
+    &__bottom_flex {
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    &__copy {
+        display: flex;
+        align-items: center;
+        min-height: 80px;
+        text-transform: capitalize;
+    }
+    
+    &__iconset {
+        display: flex;
+        align-items: center;
+    }
+    
+    &__icon_container {
+        background-color: $white;
+        width: 32px;
+        height: 32px;
+        position: relative;
+        display: inline-block;
+        margin: 0 8px 0 0;
+        color: $black;
+    }
+    
+    &__icon_container:hover {
+        background-color: $dark-pink;
+        color: $white;
+    }
+    
+    &_icon {
+        position: absolute;
+        top:50%;
+        left:50%;
+        transform: translate(-50%, -50%);
+        fill: currentColor;
+    }
+    
+    &_icon_container_pinterest {
+        margin: 0;
+    }
+}

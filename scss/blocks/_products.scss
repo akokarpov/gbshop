@@ -1,0 +1,132 @@
+.products {
+
+    &__header_wrapper {
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+        align-items: center;
+        margin: 0 0 41px;
+    }
+    
+    &__header_title {
+        @include font(30px, 36px);
+        color: $dark-blue;
+    }
+    
+    &__header_text {
+        @include font(14px, 17px);
+        color: $light-gray;
+    }
+    
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin: 0 0 48.5px 0;
+    }
+    
+    &__card_wrapper {
+        width: 360px;
+        min-height: 581px;
+        margin: 0 0 30px;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+    }
+    
+    &__card_wrapper:hover
+    &_card_overlay::before {
+        display: block;
+    }
+    
+    &__card_wrapper:hover
+    &__card_button {
+        display: block;
+    }
+    
+    &_card_overlay::before {
+        content: "";
+        width: 360px;
+        min-height: 420px;
+        background: $overlay-color;
+        position: absolute;
+        display: none;
+    }
+    
+    &__card_button {
+        background-image: url(../img/product_to-cart.svg);
+        background-repeat: no-repeat;
+        background-position: 10px;    
+        height: 42px;
+        content: "";
+        width: 138px;
+        border-radius: 0px;
+        background-color: transparent;
+        border: 1px solid $white;
+        color: $white;
+        text-transform: capitalize;
+        font-family: Lato;
+        @include font(14px, 17px, 700);
+        position: absolute;
+        top: 35%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: none;
+        text-align: center;
+        padding-left: 40px;
+        outline: none;
+    }
+    
+    &__card_content_wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        flex-grow: 1;
+        background-color: $lighter-gray;
+        padding: 20px 28px 16px;
+    }
+    
+    &__card_title {
+        @include font(13px, 16px);
+        text-transform: uppercase;
+        color: $black;
+    }
+    
+    &__card_text {
+        @include font(14px, 17px, 300);
+        color: $light-gray;
+    }
+    
+    &__card_price {
+        color: $dark-pink;
+    }
+    
+    &__button_flex {
+        display: flex;
+        justify-content: center;
+    }
+    
+    &__button_theme {
+        @include font(16px, 47px);
+        width: 211px;
+        border-radius: 0px;
+        background-color: transparent;
+        border: 1px solid $dark-pink;
+        color: $dark-pink;
+        text-transform: capitalize;
+        font-family: Lato;
+        margin: 0 0 95.5px 0;
+        padding: 0;
+        outline: 0;
+    }
+    
+    &__button_theme:active {
+        transform: scale(0.9);
+     }
+    
+    &__button_theme:hover {
+        background-color: $dark-pink;
+        border: 1px solid $dark-pink;
+        color: $white;
+    }    
+}
