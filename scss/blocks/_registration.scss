@@ -42,6 +42,10 @@
         border: 1px solid $border-input-fields;
         padding: 0 0 0 20px;
     }
+
+    :focus::-webkit-input-placeholder {
+        color: transparent;
+    }
     
     &_gender_select {
         margin: 13px 0 30px 0;
@@ -103,6 +107,7 @@
         font-family: Lato;
         @include font(14px, 17px);
         padding: 0 40px 0 0;
+        outline: none;
     }
     
     &_button_theme:active {

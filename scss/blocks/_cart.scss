@@ -1,0 +1,202 @@
+.cart {
+
+    &__banner_theme {
+        display: flex;
+        align-items: center;
+        min-height: 148px;
+        background-color: $registration-back;
+    }
+    
+    &_heading {
+        @include font(24px, 29px);
+        color: $dark-pink;
+        text-transform: uppercase;
+    }
+
+    &_theme {
+        display: flex;
+        margin: 96px auto 129px auto;
+    }
+
+    &_left-column {
+        width: 652px;
+        margin: 0 128px 0 0;
+    }
+
+    &__card_theme {
+        display: flex;
+        min-height: 306px;
+        box-shadow: 17px 19px 24px $card-shadow;
+        position: relative;
+        margin-bottom: 40px;
+    }
+
+    &__card_theme_margin_bottom {
+        margin-bottom: 73px;
+    }
+
+    &__card_img_product {
+        margin: 0 30px 0 0;
+    }
+
+    &__card_heading {
+        @include font(24px, 29px);
+        text-transform: uppercase;
+        padding: 22px 30% 42px 0;
+        color: $dark-blue;
+    }
+
+    &__card_img_close {
+        position: absolute;
+        right: 22px;
+        top: 28px;
+    }
+
+    &__card_price,
+    &__card_color,
+    &__card_size,
+    &__card_quantity {
+        @include font(22px, 26px);
+        padding: 0 0 6px 0;
+        color: $card-cart-text;
+        text-transform: capitalize;
+    }
+
+    &__card_price_pink {
+        color: $dark-pink;
+    }
+
+    &__card_quantity_number {
+        width: 43px;
+        text-align: center;
+        margin: 0 0 0 24px;
+        @include font(18px, 22px);
+        color: $card-cart-text;
+        border: 1px solid $border-input-fields;
+    }
+
+    &__card_buttons{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__card_button_clear,
+    &__card_button_continue {
+        width: 235px;
+        min-height: 50px;
+        text-transform: uppercase;
+        background: none;
+        @include font(14px, 17px, 300);
+        border: 1px solid $border-input-fields;
+        outline: 0;
+        color: $card-cart-text;
+    }
+
+    &__card_button_clear:active,
+    &__card_button_continue:active {
+        transform: scale(0.9);
+    }
+
+    &__form_theme {
+        width: 360px;
+    }
+
+    &__form_fieldset {
+        border: none;
+    }
+
+    &__form_legend {
+        @include font(16px, 19px, 300);
+        text-transform: uppercase;
+        color: $nav-text-gray;
+    }
+
+     &__form_city,
+     &__form_state,
+     &__form_zip {
+        width: 360px;
+        height: 45px;
+        @include font(13px, 16px, 300);
+        color: $nav-text-gray;
+        padding: 0 0 0 17px;
+        box-sizing: border-box;
+        margin: 20px 0 0 0;
+        border: 1px solid $nav-text-gray;
+    }
+
+    :focus::-webkit-input-placeholder {
+        color: transparent;
+    }
+
+     &__form_button_quote {
+        width: 100px;
+        min-height: 34px;
+        text-transform: uppercase;
+        background: none;
+        @include font(11px, 13px, 300);
+        border: 1px solid $border-input-fields;
+        outline: 0;
+        color: $card-cart-text;
+        margin: 24px 0 58px 0;
+    }
+
+    &__form_button_quote:active {
+        transform: scale(0.9);
+    }
+
+    &__form_subtotal_heading,
+    &__form_subtotal_price {
+        text-transform: uppercase;
+        @include font(11px, 13px);
+        text-align: right;
+        padding: 0 34px 0 0;
+    }
+
+    &__form_subtotal_heading {
+        padding: 39px 34px 12px 0;
+    }
+
+    &__form_grandtotal_heading,
+    &__form_grandtotal_price {
+        text-transform: uppercase;
+        @include font(16px, 19px, 300);
+        text-align: right;
+        padding: 0 34px 0 0;
+    }
+
+    &__form_subtotal_price,
+    &__form_grandtotal_price {
+        padding: 0 0 0 20px;
+    }
+
+    &__form_grandtotal_price_pink {
+        color: $dark-pink;
+        @include font(16px, 19px, 700);
+    }
+
+    &__form_checkout_button {
+        height: 50px;
+        width: 273px;
+        border-radius: 0px;
+        background-color: $dark-pink;
+        border: 1px solid $dark-pink;
+        color: $white;
+        text-transform: uppercase;
+        font-family: Lato;
+        @include font(16px, 19px, 300);
+        outline: none;
+        margin: 39px auto 0;
+    }
+    
+    &__form_checkout_button:active {
+        transform: scale(0.9);
+    }
+
+    &__form_box_bkg {
+        width: 100%;
+        min-height: 214px;
+        background-color: $lighter-gray;
+        display: flex;
+        flex-direction: column;
+    }
+}
