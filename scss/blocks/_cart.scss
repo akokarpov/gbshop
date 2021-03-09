@@ -18,12 +18,12 @@
         margin: 96px auto 129px auto;
     }
 
-    &_left-column {
+    &__left_column {
         width: 652px;
         margin: 0 128px 0 0;
     }
 
-    &__card_theme {
+    &__product {
         display: flex;
         min-height: 306px;
         box-shadow: 17px 19px 24px $card-shadow;
@@ -31,42 +31,42 @@
         margin-bottom: 40px;
     }
 
-    &__card_theme_margin_bottom {
+    &__product_margin-bottom {
         margin-bottom: 73px;
     }
 
-    &__card_img_product {
+    &__product-img {
         margin: 0 30px 0 0;
     }
 
-    &__card_heading {
+    &__product-heading {
         @include font(24px, 29px);
         text-transform: uppercase;
         padding: 22px 30% 42px 0;
         color: $dark-blue;
     }
 
-    &__card_img_close {
+    &__product-img-close {
         position: absolute;
         right: 22px;
         top: 28px;
     }
 
-    &__card_price,
-    &__card_color,
-    &__card_size,
-    &__card_quantity {
+    &__product-price,
+    &__product-color,
+    &__product-size,
+    &__product-quantity {
         @include font(22px, 26px);
         padding: 0 0 6px 0;
         color: $card-cart-text;
         text-transform: capitalize;
     }
 
-    &__card_price_pink {
+    &__product-price_pink {
         color: $dark-pink;
     }
 
-    &__card_quantity_number {
+    &__product-quantity-input {
         width: 43px;
         text-align: center;
         margin: 0 0 0 24px;
@@ -75,13 +75,13 @@
         border: 1px solid $border-input-fields;
     }
 
-    &__card_buttons{
+    &__product-buttons-wrapper {
         display: flex;
         justify-content: space-between;
     }
 
-    &__card_button_clear,
-    &__card_button_continue {
+    &__product-button-clear,
+    &__product-button-continue {
         width: 235px;
         min-height: 50px;
         text-transform: uppercase;
@@ -92,28 +92,28 @@
         color: $card-cart-text;
     }
 
-    &__card_button_clear:active,
-    &__card_button_continue:active {
+    &__product-button-clear:active,
+    &__product-button-continue:active {
         transform: scale(0.9);
     }
 
-    &__form_theme {
+    &__form {
         width: 360px;
     }
 
-    &__form_fieldset {
+    &__form-fieldset {
         border: none;
     }
 
-    &__form_legend {
+    &__form-legend {
         @include font(16px, 19px, 300);
         text-transform: uppercase;
         color: $nav-text-gray;
     }
 
-     &__form_city,
-     &__form_state,
-     &__form_zip {
+     &__form-city,
+     &__form-state,
+     &__form-zip {
         width: 360px;
         height: 45px;
         @include font(13px, 16px, 300);
@@ -128,7 +128,7 @@
         color: transparent;
     }
 
-     &__form_button_quote {
+     &__form-button-quote {
         width: 100px;
         min-height: 34px;
         text-transform: uppercase;
@@ -140,41 +140,49 @@
         margin: 24px 0 58px 0;
     }
 
-    &__form_button_quote:active {
+    &__form-button-quote:active {
         transform: scale(0.9);
     }
 
-    &__form_subtotal_heading,
-    &__form_subtotal_price {
+    &__form-checkout-box {
+        width: 100%;
+        min-height: 214px;
+        background-color: $lighter-gray;
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__form-subtotal-heading,
+    &__form-subtotal-price {
         text-transform: uppercase;
         @include font(11px, 13px);
         text-align: right;
         padding: 0 34px 0 0;
     }
 
-    &__form_subtotal_heading {
+    &__form-subtotal-heading {
         padding: 39px 34px 12px 0;
     }
 
-    &__form_grandtotal_heading,
-    &__form_grandtotal_price {
+    &__form-grandtotal-heading,
+    &__form-grandtotal-price {
         text-transform: uppercase;
         @include font(16px, 19px, 300);
         text-align: right;
         padding: 0 34px 0 0;
     }
 
-    &__form_subtotal_price,
-    &__form_grandtotal_price {
+    &__form-subtotal-price,
+    &__form-grandtotal-price {
         padding: 0 0 0 20px;
     }
 
-    &__form_grandtotal_price_pink {
+    &__form-grandtotal-price_pink {
         color: $dark-pink;
         @include font(16px, 19px, 700);
     }
 
-    &__form_checkout_button {
+    &__form-checkout-button {
         height: 50px;
         width: 273px;
         border-radius: 0px;
@@ -188,15 +196,7 @@
         margin: 39px auto 0;
     }
     
-    &__form_checkout_button:active {
+    &__form-checkout-button:active {
         transform: scale(0.9);
-    }
-
-    &__form_box_bkg {
-        width: 100%;
-        min-height: 214px;
-        background-color: $lighter-gray;
-        display: flex;
-        flex-direction: column;
     }
 }

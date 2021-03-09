@@ -1,11 +1,23 @@
 .products {
 
     &__header_wrapper {
+
+        @include desktop {
+            margin: 0 0 41px;
+        }
+    
+        @include tablet {
+            margin: 0 0 74px;
+        }
+    
+        @include mobile {
+            margin: 0 0 64px;
+        }
+
         display: flex;
         flex-direction: column;
         flex-grow: 1;
         align-items: center;
-        margin: 0 0 41px;
     }
     
     &__header_title {
@@ -19,16 +31,40 @@
     }
     
     &__list {
+
+        @include desktop {
+            margin: 0 0 48.5px 0;
+        }
+    
+        @include tablet {
+            margin: 0 0 32px 0;
+        }
+    
+        @include mobile {
+            margin: 0 0 41px 0;
+        }
+        
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
-        margin: 0 0 48.5px 0;
     }
     
     &__card_wrapper {
+
+        @include desktop {
+            margin: 0 0 30px;
+        }
+    
+        @include tablet {
+            margin: 0 0 15px;
+        }
+    
+        @include mobile {
+            margin: 0 0 15px;
+        }
+
         width: 360px;
         min-height: 581px;
-        margin: 0 0 30px;
         display: flex;
         flex-direction: column;
         position: relative;
@@ -51,6 +87,10 @@
         background: $overlay-color;
         position: absolute;
         display: none;
+    }
+
+    &__image {
+        display: block;
     }
     
     &__card_button {
