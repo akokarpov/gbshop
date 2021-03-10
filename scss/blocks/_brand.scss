@@ -15,6 +15,7 @@
     @include mobile {
         justify-content: center;
         min-height: 363px;
+        margin: 0 0 64px 0;
     }
     
     &__image {
@@ -52,12 +53,22 @@
     }
     
     &__slogan-title {
-        @include font(48px, 58px, 900);
+
         color: $dark-blue;
         text-transform: uppercase;
+        
+        @include desktop {
+            @include font(48px, 58px, 900);
+        }
+
         @include tablet {
             @include font(37px, 44px, 800);
         }
+
+        @include mobile {
+            @include font(37px, 44px, 800);
+        }
+        
     }
     
     &__slogan-subtitle {

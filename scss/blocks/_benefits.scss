@@ -35,10 +35,10 @@
         justify-content: space-between;
         align-items: center;
         flex-direction: column;
-        width: 360px;
-        min-height: 134px;
 
         @include desktop {
+            width: 360px;
+            min-height: 134px;
             margin: 103px 0 0 0;
         }
 
@@ -48,7 +48,8 @@
         }
 
         @include mobile {
-            margin: 103px 0 0 0;
+            width: 100%;
+            margin: 0;
         }
     }
     
@@ -58,7 +59,7 @@
         }
 
         @include mobile {
-            margin: 103px 0 0 0;
+            padding-bottom: 81px;
         }
     }
     

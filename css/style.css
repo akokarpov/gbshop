@@ -72,14 +72,14 @@ body {
 @media (max-width: 768px) {
   .container {
     max-width: 736px;
-    margin: 0 16px auto;
+    margin: 0 auto;
   }
 }
 
 @media (max-width: 375px) {
   .container {
-    max-width: 343px;
-    margin: 0 16px auto;
+    max-width: 359px;
+    margin: 0 auto;
   }
 }
 
@@ -125,6 +125,12 @@ body {
   font-style: normal;
 }
 
+@media (max-width: 375px) {
+  .header__search-input {
+    width: 130px;
+  }
+}
+
 .header__search-input:focus {
   border-bottom: 2px solid #F16D7F;
 }
@@ -139,8 +145,20 @@ body {
   margin: 0 34px 0 0;
 }
 
+@media (max-width: 375px) {
+  .header__button {
+    margin: 0;
+  }
+}
+
 .header__profile {
   margin: 0 34px 0 0;
+}
+
+@media (max-width: 375px) {
+  .header__profile {
+    display: none;
+  }
 }
 
 .header__icon_fill_color {
@@ -149,6 +167,12 @@ body {
 
 .header__cart-link {
   position: relative;
+}
+
+@media (max-width: 375px) {
+  .header__cart-link {
+    display: none;
+  }
 }
 
 .header__cart-link::before {
@@ -188,16 +212,27 @@ body {
 
 .header__navigation {
   position: absolute;
-  left: 1368px;
   min-height: 764px;
   width: 232px;
   background-color: #FFFFFF;
   display: none;
 }
 
+@media (max-width: 1600px) {
+  .header__navigation {
+    left: 1368px;
+  }
+}
+
 @media (max-width: 768px) {
   .header__navigation {
     left: 536px;
+  }
+}
+
+@media (max-width: 375px) {
+  .header__navigation {
+    left: 143px;
   }
 }
 
@@ -290,6 +325,7 @@ body {
   .brand {
     justify-content: center;
     min-height: 363px;
+    margin: 0 0 64px 0;
   }
 }
 
@@ -338,15 +374,29 @@ body {
 }
 
 .brand__slogan-title {
-  font-size: 48px;
-  line-height: 58px;
-  font-weight: 900;
-  font-style: normal;
   color: #222222;
   text-transform: uppercase;
 }
 
+@media (max-width: 1600px) {
+  .brand__slogan-title {
+    font-size: 48px;
+    line-height: 58px;
+    font-weight: 900;
+    font-style: normal;
+  }
+}
+
 @media (max-width: 768px) {
+  .brand__slogan-title {
+    font-size: 37px;
+    line-height: 44px;
+    font-weight: 800;
+    font-style: normal;
+  }
+}
+
+@media (max-width: 375px) {
   .brand__slogan-title {
     font-size: 37px;
     line-height: 44px;
@@ -428,7 +478,8 @@ body {
 @media (max-width: 375px) {
   .offers__item {
     width: 100%;
-    min-height: 260px;
+    margin: 0 0 32px;
+    min-height: 247px;
   }
 }
 
@@ -530,8 +581,6 @@ body {
 }
 
 .products__card_wrapper {
-  width: 360px;
-  min-height: 581px;
   display: flex;
   flex-direction: column;
   position: relative;
@@ -539,6 +588,8 @@ body {
 
 @media (max-width: 1600px) {
   .products__card_wrapper {
+    width: 360px;
+    min-height: 581px;
     margin: 0 0 30px;
   }
 }
@@ -574,6 +625,27 @@ body {
 
 .products__image {
   display: block;
+}
+
+@media (max-width: 1600px) {
+  .products__image {
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .products__image {
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media (max-width: 375px) {
+  .products__image {
+    width: 100%;
+    height: auto;
+  }
 }
 
 .products__card_button {
@@ -655,6 +727,12 @@ body {
   outline: 0;
 }
 
+@media (max-width: 375px) {
+  .products__button_theme {
+    margin: 0 0 110px 0;
+  }
+}
+
 .products__button_theme:active {
   transform: scale(0.9);
 }
@@ -703,12 +781,12 @@ body {
   justify-content: space-between;
   align-items: center;
   flex-direction: column;
-  width: 360px;
-  min-height: 134px;
 }
 
 @media (max-width: 1600px) {
   .benefits__item_wrapper {
+    width: 360px;
+    min-height: 134px;
     margin: 103px 0 0 0;
   }
 }
@@ -722,7 +800,8 @@ body {
 
 @media (max-width: 375px) {
   .benefits__item_wrapper {
-    margin: 103px 0 0 0;
+    width: 100%;
+    margin: 0;
   }
 }
 
@@ -734,7 +813,7 @@ body {
 
 @media (max-width: 375px) {
   .benefits__item_wrapper-margin-bottom {
-    margin: 103px 0 0 0;
+    padding-bottom: 81px;
   }
 }
 
@@ -778,7 +857,7 @@ body {
 
 @media (max-width: 375px) {
   .footer__subscribe-theme {
-    background-size: contain;
+    background-size: cover;
   }
 }
 
@@ -830,10 +909,8 @@ body {
 
 @media (max-width: 375px) {
   .footer__subscribe-testimonial {
-    align-items: center;
     flex-direction: column;
-    justify-content: flex-start;
-    min-height: 448px;
+    width: 100%;
   }
 }
 
@@ -848,11 +925,29 @@ body {
   text-align: center;
 }
 
+@media (max-width: 375px) {
+  .footer__subscribe-text {
+    margin: 0 0 60px 0;
+  }
+}
+
 .footer__subscribe-form {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 557px;
+}
+
+@media (max-width: 1600px) {
+  .footer__subscribe-form {
+    width: 100%;
+    width: 557px;
+  }
+}
+
+@media (max-width: 375px) {
+  .footer__subscribe-form {
+    width: 100%;
+  }
 }
 
 .footer__subscribe-form-title {
@@ -864,6 +959,15 @@ body {
   text-align: center;
 }
 
+@media (max-width: 375px) {
+  .footer__subscribe-form-title {
+    font-size: 24px;
+    line-height: 36px;
+    font-weight: 700;
+    font-style: normal;
+  }
+}
+
 .footer__subscribe-form-subtitle {
   font-size: 18px;
   line-height: 30px;
@@ -872,6 +976,15 @@ body {
   text-transform: uppercase;
   text-align: center;
   margin: 0 0 32px 0;
+}
+
+@media (max-width: 375px) {
+  .footer__subscribe-form-subtitle {
+    font-size: 14px;
+    line-height: 22px;
+    font-weight: 400;
+    font-style: normal;
+  }
 }
 
 .footer__subscribe-email-flex {
@@ -885,6 +998,12 @@ body {
   }
 }
 
+@media (max-width: 375px) {
+  .footer__subscribe-email-flex {
+    padding: 0 0 110px 0;
+  }
+}
+
 .footer__subscribe-input-theme {
   height: 50px;
   width: 256px;
@@ -894,6 +1013,12 @@ body {
   background-color: #E1E1E1;
   padding: 0 0 0 20px;
   outline: none;
+}
+
+@media (max-width: 375px) {
+  .footer__subscribe-input-theme {
+    width: 220px;
+  }
 }
 
 .footer__subscribe-input-theme:hover {
@@ -938,11 +1063,26 @@ body {
   justify-content: space-between;
 }
 
+@media (max-width: 375px) {
+  .footer__bottom_flex {
+    flex-direction: column-reverse;
+    align-items: center;
+    padding: 52px 0 0 0;
+  }
+}
+
 .footer__copy {
   display: flex;
   align-items: center;
   min-height: 80px;
   text-transform: capitalize;
+}
+
+@media (max-width: 375px) {
+  .footer__copy {
+    min-height: 0;
+    margin: 40px 0 0 0;
+  }
 }
 
 .footer__iconset {

@@ -52,6 +52,8 @@
     &__card_wrapper {
 
         @include desktop {
+            width: 360px;
+            min-height: 581px;
             margin: 0 0 30px;
         }
     
@@ -63,8 +65,7 @@
             margin: 0 0 15px;
         }
 
-        width: 360px;
-        min-height: 581px;
+
         display: flex;
         flex-direction: column;
         position: relative;
@@ -91,6 +92,22 @@
 
     &__image {
         display: block;
+
+        @include desktop {
+            width: 100%;
+            height: auto;
+        }
+
+        @include tablet {
+            width: 100%;
+            height: auto;
+        }
+
+        @include mobile {
+            width: 100%;
+            height: auto;
+        }
+        
     }
     
     &__card_button {
@@ -158,6 +175,11 @@
         margin: 0 0 95.5px 0;
         padding: 0;
         outline: 0;
+
+        @include mobile {
+            margin: 0 0 110px 0;
+        }
+
     }
     
     &__button_theme:active {

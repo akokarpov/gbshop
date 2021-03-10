@@ -23,6 +23,10 @@
         outline: none;
         color: $header-icon-gray;
         @include font (20px, 24px);
+
+        @include mobile {
+            width: 130px;;
+        }
     }
 
     &__search-input:focus {
@@ -37,10 +41,18 @@
         background-color: transparent;
         border: none;
         margin: 0 34px 0 0;
+
+        @include mobile {
+            margin: 0;
+        }
     }
 
     &__profile {
         margin: 0 34px 0 0;
+
+        @include mobile {
+            display: none;
+        }
     }
 
     &__icon_fill_color {
@@ -49,6 +61,10 @@
 
     &__cart-link {
         position: relative;
+
+        @include mobile {
+            display: none;
+        }
     }
 
     &__cart-link::before {
@@ -88,13 +104,21 @@
 
     &__navigation {
         position: absolute;
-        left: 1368px;
         min-height: 764px;
         width: 232px;
         background-color: $white;
         display: none;
+
+        @include desktop {
+            left: 1368px;
+        }
+
         @include tablet {
             left: 536px;
+        }
+        
+        @include mobile {
+            left: 143px;
         }
     }
 
