@@ -20,17 +20,10 @@
     
     &__image {
 
+        width: 50%;
+        height: auto;
         display: block;
-
-        @include desktop {
-            width: 50%;
-            height: auto;
-        }
-
-        @include tablet {
-            width: 50%;
-            height: auto;
-        }
+        
         @include mobile {
             display: none;
         }

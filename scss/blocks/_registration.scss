@@ -1,20 +1,28 @@
 .registration {
-    
-    &__banner_theme {
-        display: flex;
-        align-items: center;
-        min-height: 148px;
+
+    &-banner {
         background-color: $registration-back;
     }
     
-    &_heading {
+    &-banner-theme {
+        min-height: 148px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    
+    &-heading {
         @include font(24px, 29px);
         color: $dark-pink;
         text-transform: uppercase;
     }
     
-    &_main {
+    &-main {
         display: flex;
+
+        @include mobile {
+            flex-direction: column;
+        }
     }
     
     &__form {
@@ -22,6 +30,15 @@
         margin: 64px 129px 96px 0;
         display: flex;
         flex-direction: column;
+
+        @include tablet {
+            margin: 40px 22px 96px 0;
+        }
+
+        @include mobile {
+            margin: 40px 22px 96px 0;
+        }
+
     }
     
     &_fieldset {
@@ -41,6 +58,10 @@
         margin: 0 0 20px 0;
         border: 1px solid $border-input-fields;
         padding: 0 0 0 20px;
+
+        @include tablet {
+            box-sizing: border-box;
+        }
     }
 
     :focus::-webkit-input-placeholder {
@@ -115,13 +136,21 @@
     }
     
     &__benefits {
-        margin: 64px 0 0 0;
+        margin: 40px 0 0 0;
+
+        @include mobile {
+            margin: 40px 0 96px 0
+        }
     }
     
     &__benefits_heading,
     &_benefits_text,
     &_list_point {
         @include font(24px, 29px, 300);
+
+        @include tablet {
+            @include font(16px, 19px, 300);
+        }
     }
     
     &__benefits_heading {

@@ -1,26 +1,46 @@
 .cart {
 
-    &__banner_theme {
-        display: flex;
-        align-items: center;
-        min-height: 148px;
+    &__banner {
         background-color: $registration-back;
     }
+
+    &-banner-theme {
+        min-height: 148px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        @include mobile {
+            align-items: center;
+        }
+    }
     
-    &_heading {
+    &-heading {
         @include font(24px, 29px);
         color: $dark-pink;
         text-transform: uppercase;
     }
 
-    &_theme {
+    &-theme {
         display: flex;
         margin: 96px auto 129px auto;
+
+        @include tablet {
+            flex-direction: column;
+            align-items: center;
+            margin: 59px auto 0 auto;
+            justify-content: end;
+        }
     }
 
     &__left_column {
         width: 652px;
         margin: 0 128px 0 0;
+
+        @include tablet {
+            margin: 0;
+            width: 100%;
+        }
     }
 
     &__product {
@@ -29,14 +49,32 @@
         box-shadow: 17px 19px 24px $card-shadow;
         position: relative;
         margin-bottom: 40px;
+
+        @include mobile {
+            min-height: 188px;
+        }
     }
 
     &__product_margin-bottom {
         margin-bottom: 73px;
+
+        @include tablet {
+            margin-bottom: 62px;
+        }
+
+        @include mobile {
+            margin-bottom: 30px;
+        }
     }
 
     &__product-img {
         margin: 0 30px 0 0;
+
+        @include mobile {
+            width: 38%;
+            height: auto;
+            margin: 0 15px 0 0;
+        }
     }
 
     &__product-heading {
@@ -44,12 +82,23 @@
         text-transform: uppercase;
         padding: 22px 30% 42px 0;
         color: $dark-blue;
+
+        @include mobile {
+            @include font(16px, 19px);
+            padding: 13px 73px 26px 0;
+        }
     }
 
     &__product-img-close {
         position: absolute;
         right: 22px;
         top: 28px;
+        @include mobile {
+            width: 10px;
+            height: auto;
+            right: 15px;
+            top: 18px;
+        }
     }
 
     &__product-price,
@@ -60,6 +109,11 @@
         padding: 0 0 6px 0;
         color: $card-cart-text;
         text-transform: capitalize;
+
+        @include mobile {
+            @include font(14px, 16px);
+            padding: 0 0 4px 0;
+        }
     }
 
     &__product-price_pink {
@@ -73,11 +127,25 @@
         @include font(18px, 22px);
         color: $card-cart-text;
         border: 1px solid $border-input-fields;
+        @include mobile {
+            @include font(10px, 12px);
+            width: 23px;
+        }
     }
 
     &__product-buttons-wrapper {
         display: flex;
         justify-content: space-between;
+
+        @include tablet {
+            justify-content: center;
+            margin: 0 0 65px 0;
+        }
+
+        @include mobile {
+            justify-content: space-between;
+            margin: 0 0 65px 0;
+        }
     }
 
     &__product-button-clear,
@@ -90,6 +158,12 @@
         border: 1px solid $border-input-fields;
         outline: 0;
         color: $card-cart-text;
+        @include mobile {
+            @include font(12px, 14px);
+            text-transform: capitalize;
+            min-height: 33px;
+            width: 175px;
+        }
     }
 
     &__product-button-clear:active,
@@ -97,8 +171,39 @@
         transform: scale(0.9);
     }
 
+    &__product-button-clear {
+        @include tablet {
+            margin: 0 25px 0 0;
+        }
+
+        @include mobile {
+            margin: 0 0 0 0;
+        }
+    }
+
+    &__product-button-continue {
+        @include tablet {
+            margin: 0 0 0 25px;
+        }
+        
+        @include mobile {
+            margin: 0 0 0 0;
+        }
+    }
+
     &__form {
         width: 360px;
+
+        @include tablet {
+            display: flex;
+            width: 100%;
+        }
+
+        @include mobile {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+        }
     }
 
     &__form-fieldset {
@@ -122,6 +227,7 @@
         box-sizing: border-box;
         margin: 20px 0 0 0;
         border: 1px solid $nav-text-gray;
+        box-sizing: border-box;
     }
 
     :focus::-webkit-input-placeholder {
@@ -138,6 +244,10 @@
         outline: 0;
         color: $card-cart-text;
         margin: 24px 0 58px 0;
+
+        @include mobile {
+            margin: 24px 0 48px 0;
+        }
     }
 
     &__form-button-quote:active {
@@ -150,6 +260,15 @@
         background-color: $lighter-gray;
         display: flex;
         flex-direction: column;
+
+        @include tablet {
+            margin: 38px 0 147px 0;
+            min-width: 360px;
+        }
+
+        @include mobile {
+            margin: 0 0 96px 0;
+        }
     }
 
     &__form-subtotal-heading,
