@@ -1,6 +1,11 @@
 .header {
     position: relative;
 
+    &__controls {
+        display: flex;
+        align-items: center;
+    }
+
     &_theme_dark_blue {
         background-color: $dark-blue;
         position: relative;
@@ -10,18 +15,77 @@
         margin: 0 41px 0 0;
     }
 
+    &__search-input {
+        background: none;
+        border: none;
+        margin: 0 0 0 28px;
+        min-height: 27px;
+        outline: none;
+        color: $header-icon-gray;
+        @include font (20px, 24px);
+
+        @include mobile {
+            width: 130px;;
+        }
+    }
+
+    &__search-input:focus {
+        border-bottom: 2px solid $dark-pink;
+    }
+
+    :focus::-webkit-input-placeholder {
+        color: transparent;
+    }
+
     &__button {
         background-color: transparent;
         border: none;
         margin: 0 34px 0 0;
+
+        @include mobile {
+            margin: 0;
+        }
     }
 
     &__profile {
         margin: 0 34px 0 0;
+
+        @include mobile {
+            display: none;
+        }
     }
 
     &__icon_fill_color {
         fill: $header-icon-gray;
+    }
+
+    &__cart-link {
+        position: relative;
+
+        @include mobile {
+            display: none;
+        }
+    }
+
+    &__cart-link::before {
+        content: "";
+        width: 19px;
+        height: 19px;
+        position: absolute;
+        right: -8px;
+        top: -7px;
+        background-color: $dark-pink;
+        border-radius: 50%;
+    }
+
+    &__cart-link::after {
+        content: "5";
+        position: absolute;
+        @include font (12px, 14px);
+        right: -2px;
+        top: -5px;
+        color: $white;
+        text-align: center;
     }
 
     &__menu:hover,
@@ -40,11 +104,23 @@
 
     &__navigation {
         position: absolute;
-        left: 1368px;
         min-height: 764px;
         width: 232px;
         background-color: $white;
         display: none;
+        z-index: 1;
+
+        @include desktop {
+            left: 1368px;
+        }
+
+        @include tablet {
+            left: 536px;
+        }
+
+        @include mobile {
+            left: 143px;
+        }
     }
 
     &__navigation_display_block {
@@ -79,8 +155,30 @@
         text-decoration: none;
     }
 
-    &.header__nav_list {
+    &__nav_list {
         margin: 12px 0 12px 54.5px;
+    }
+
+    &__nav-overlay {
+        content: "";
+        width: 1368px;
+        min-height: 765px;
+        background: $overlay-color;
+        position: absolute;
+        display: none;
+        z-index: 1;
+    }
+
+    &__nav-overlay_block {
+        display: block;
+
+        @include tablet {
+            display: none;
+        }
+        
+        @include mobile {
+            display: none;
+        }
     }
     
 }

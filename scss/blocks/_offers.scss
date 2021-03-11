@@ -1,7 +1,16 @@
 .offers {
 
-        margin-top: 64px;
+    @include desktop {
         margin-bottom: 97px;
+    }
+
+    @include tablet {
+        margin-bottom: 155px;
+    }
+
+    @include mobile {
+        margin-bottom: 64px;
+    }
     
     &__list {
         display: flex;
@@ -11,12 +20,28 @@
     }
     
     &__item {
-        width: 360px;
-        min-height: 260px;
+
         background-color:$brown;
-        margin: 0 0 30px;
         @include flex-center();
         flex-direction: column;
+        
+        @include desktop {
+            margin: 0 0 30px;
+            width: 32%;
+            min-height: 260px;
+        }
+
+        @include tablet {
+            margin: 0 0 16px;
+            width: 32%;
+            min-height: 167px;
+        }
+
+        @include mobile {
+            width: 100%;
+            margin: 0 0 32px;
+            min-height: 247px;
+        }
     }
     
     &__item_women {
