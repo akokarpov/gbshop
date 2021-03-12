@@ -54,7 +54,7 @@ table {
 }
 
 body {
-  font-family: Lato;
+  font-family: "Lato", "Arial", "sans-serif";
   font-style: normal;
   font-size: 16px;
   line-height: 19px;
@@ -95,7 +95,18 @@ body {
 }
 
 .bg-dark {
-  background-color: #9c7653 !important;
+  background-color: #222222 !important;
+}
+
+.btn-outline-success {
+  color: #F16D7F;
+  border-color: #F16D7F;
+}
+
+.btn-outline-success:hover {
+  color: #fff;
+  background-color: #F16D7F;
+  border-color: #F16D7F;
 }
 
 .dropdown {
@@ -2166,9 +2177,6 @@ body {
 }
 
 .product__button {
-  background-image: url(../img/product_to-cart_pink.svg);
-  background-repeat: no-repeat;
-  background-position: 20px;
   height: 42px;
   content: "";
   width: 211px;
@@ -2177,12 +2185,11 @@ body {
   border: 1px solid #F16D7F;
   color: #F16D7F;
   text-transform: capitalize;
-  font-family: Lato;
   font-size: 14px;
-  line-height: 17px;
+  line-height: 25px;
   font-weight: 700;
   font-style: normal;
-  text-align: center;
+  text-align: left;
   outline: none;
   z-index: 2;
   display: block;
@@ -2252,5 +2259,10 @@ body {
   .img_hidden-mobile {
     display: none;
   }
+}
+
+.fa-cart-img {
+  padding: 0 25px;
+  font-size: 25px;
 }
 /*# sourceMappingURL=style.css.map */

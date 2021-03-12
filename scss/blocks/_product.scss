@@ -111,10 +111,7 @@
         margin: 0 0 130px 0;
     }
 
-    &__button {
-        background-image: url(../img/product_to-cart_pink.svg);
-        background-repeat: no-repeat;
-        background-position: 20px;    
+    &__button {   
         height: 42px;
         content: "";
         width: 211px;
@@ -123,9 +120,8 @@
         border: 1px solid $dark-pink;
         color: $dark-pink;
         text-transform: capitalize;
-        font-family: Lato;
-        @include font(14px, 17px, 700);
-        text-align: center;
+        @include font(14px, 25px, 700);
+        text-align: left;
         outline: none;
         z-index: 2;
         display: block;
@@ -185,4 +181,9 @@
     @include mobile {
         display: none;
     }
+}
+
+.fa-cart-img {
+    padding: 0 25px;
+    font-size: 25px;
 }

@@ -1,5 +1,16 @@
 .bg-dark {
-  background-color: $brown !important;
+  background-color: $dark-blue !important;
+}
+
+.btn-outline-success {
+  color: $dark-pink;
+  border-color: $dark-pink;
+}
+
+.btn-outline-success:hover {
+  color: #fff;
+  background-color: $dark-pink;
+  border-color: $dark-pink;
 }
 
 .dropdown {
