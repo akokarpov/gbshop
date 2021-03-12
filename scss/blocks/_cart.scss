@@ -31,11 +31,18 @@
             margin: 59px auto 0 auto;
             justify-content: end;
         }
+
+        @include mobile {
+            flex-direction: column;
+            margin: 39px auto 96px auto;
+        }
     }
 
     &__left_column {
-        width: 652px;
-        margin: 0 128px 0 0;
+
+        @include desktop {
+            margin: 0 128px 0 0;
+        }
 
         @include tablet {
             margin: 0;
@@ -69,6 +76,11 @@
 
     &__product-img {
         margin: 0 30px 0 0;
+
+        @include tablet {
+            width: 34%;
+            height: auto;
+        }
 
         @include mobile {
             width: 38%;
@@ -150,14 +162,24 @@
 
     &__product-button-clear,
     &__product-button-continue {
-        width: 235px;
-        min-height: 50px;
+
         text-transform: uppercase;
         background: none;
         @include font(14px, 17px, 300);
         border: 1px solid $border-input-fields;
         outline: 0;
         color: $card-cart-text;
+
+        @include desktop {
+            width: 40%;
+            min-height: 50px;
+        }
+
+        @include tablet {
+            width: 31%;
+            min-height: 50px;
+        }
+
         @include mobile {
             @include font(12px, 14px);
             text-transform: capitalize;
@@ -192,7 +214,10 @@
     }
 
     &__form {
-        width: 360px;
+
+        @include desktop {
+            width: 31%;
+        }
 
         @include tablet {
             display: flex;
@@ -219,7 +244,7 @@
      &__form-city,
      &__form-state,
      &__form-zip {
-        width: 360px;
+        width: 100%;
         height: 45px;
         @include font(13px, 16px, 300);
         color: $nav-text-gray;
@@ -228,6 +253,12 @@
         margin: 20px 0 0 0;
         border: 1px solid $nav-text-gray;
         box-sizing: border-box;
+    }
+
+    &__form-city:hover,
+     &__form-state:hover,
+     &__form-zip:hover {
+        border: 1px solid $dark-pink;
     }
 
     :focus::-webkit-input-placeholder {
@@ -262,12 +293,12 @@
         flex-direction: column;
 
         @include tablet {
-            margin: 38px 0 147px 0;
+            margin: 38px 0 147px 15px;
             min-width: 360px;
         }
 
         @include mobile {
-            margin: 0 0 96px 0;
+            margin: 0;
         }
     }
 
@@ -303,7 +334,6 @@
 
     &__form-checkout-button {
         height: 50px;
-        width: 273px;
         border-radius: 0px;
         background-color: $dark-pink;
         border: 1px solid $dark-pink;
@@ -313,6 +343,7 @@
         @include font(16px, 19px, 300);
         outline: none;
         margin: 39px auto 0;
+        width: 73%;
     }
     
     &__form-checkout-button:active {

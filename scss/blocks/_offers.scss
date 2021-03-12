@@ -46,18 +46,22 @@
     
     &__item_women {
         background-image: url(../img/women_item.jpg);
+        background-size: cover;
     }
     
     &__item_men {
         background-image: url(../img/men_item.jpg);
+        background-size: cover;
     }
     
     &__item_kids {
         background-image: url(../img/kids_item.jpg);
+        background-size: cover;
     }
     
     &__item_accessories {
         background-image: url(../img/accessories_item.jpg);
+        background-size: cover;
         width: 100%;
         min-height: 180px;
         margin: 0;

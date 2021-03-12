@@ -36,7 +36,8 @@
         }
 
         @include mobile {
-            margin: 40px 22px 96px 0;
+            margin: 40px 22px 40px 0;
+            width: 100%;
         }
 
     }
@@ -58,10 +59,19 @@
         margin: 0 0 20px 0;
         border: 1px solid $border-input-fields;
         padding: 0 0 0 20px;
+        box-sizing: border-box;
 
         @include tablet {
             box-sizing: border-box;
         }
+
+        @include mobile {
+            width: 100%;
+        }
+    }
+
+    &__input_field:hover {
+        border: 1px solid $dark-pink;
     }
 
     :focus::-webkit-input-placeholder {
@@ -94,6 +104,10 @@
         border: 1px solid $border-input-fields;
         border-radius: 50%;
         left: -20px;
+    }
+
+    &_radio_label:hover::before {
+        border: 1px solid $dark-pink;
     }
     
     &_radio:checked+&_radio_label::before {
@@ -136,10 +150,17 @@
     }
     
     &__benefits {
-        margin: 40px 0 0 0;
+
+        @include desktop {
+            margin: 64px 0 0 0;
+        }
+
+        @include tablet {
+            margin: 40px 0 0 0;
+        }
 
         @include mobile {
-            margin: 40px 0 96px 0
+            margin: 0 0 100px 0
         }
     }
     
@@ -149,6 +170,10 @@
         @include font(24px, 29px, 300);
 
         @include tablet {
+            @include font(16px, 19px, 300);
+        }
+
+        @include mobile {
             @include font(16px, 19px, 300);
         }
     }

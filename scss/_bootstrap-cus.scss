@@ -1,0 +1,46 @@
+.bg-dark {
+  background-color: $brown !important;
+}
+
+.dropdown {
+  display: inline;
+
+  &-item {
+    @include font (14px, 16px);
+    color: $nav-text-gray;
+    text-transform: uppercase;
+  }
+
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  z-index: 1000;
+  display: none;
+  min-width: 10rem;
+  padding: 0.5rem 0;
+  margin: 0;
+  font-size: 1rem;
+  color: #212529;
+  text-align: left;
+  list-style: none;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 0.25rem;
+}
+
+.btn-sm, .btn-group-sm > .btn {
+  padding: 0.25rem 0.5rem;
+  @include font (14px, 16px);
+  text-transform: uppercase;
+  background: none;
+  color: $card-cart-text;
+  border-radius: 0.2rem;
+  border: none;
+
+  @include mobile {
+    @include font (10px, 12px);
+  }
+}
