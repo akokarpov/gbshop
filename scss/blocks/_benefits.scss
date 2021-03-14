@@ -10,8 +10,6 @@
         display: flex;
 
         @include desktop {
-            display: flex;
-            flex-wrap: wrap;
             justify-content:space-between;
             min-height: 235px;
         }
@@ -19,11 +17,14 @@
         @include tablet {
             flex-direction: column;
             align-items: center;
+            justify-content: center;
+            padding: 48px 0 16px 0;
         }
 
         @include mobile {
-            display: flex;
             flex-direction: column;
+            padding: 48px 0 35px 0;
+            justify-content: center;
             align-items: center;
         }
 
@@ -37,29 +38,20 @@
         flex-direction: column;
 
         @include desktop {
-            width: 360px;
+            width: 50%;
             min-height: 134px;
             margin: 103px 0 0 0;
         }
 
         @include tablet {
+            width: 50%;
             margin: 0;
-            padding: 48px 0 48px;
+            margin: 0 0 48px 0;
         }
 
         @include mobile {
             width: 100%;
-            margin: 0;
-        }
-    }
-    
-    &__item_wrapper-margin-bottom {
-        @include tablet {
-            padding-bottom: 64px;
-        }
-
-        @include mobile {
-            padding-bottom: 81px;
+            margin: 0 0 46px 0;
         }
     }
     
@@ -67,6 +59,14 @@
         @include font(20px, 24px);
         color: $gray;
         text-transform: capitalize;
+
+        @include tablet {
+            margin: 0 0 15px 0;
+        }
+
+        @include mobile {
+            margin: 0 0 15px 0;
+        }
     }
     
     &__item_text {
@@ -74,5 +74,16 @@
         color: $gray;
         padding: 0 25px;
         text-align: center;
+    }
+
+    &__image {
+
+        @include tablet {
+            margin: 0 0 25px 0;
+        }
+
+        @include mobile {
+            margin: 0 0 27px 0;
+        }
     }
 }

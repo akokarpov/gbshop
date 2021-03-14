@@ -5,7 +5,6 @@
         background-repeat: no-repeat;
 
         @include desktop {
-            min-height: 448px;
             background-position: center;
         }
 
@@ -16,6 +15,7 @@
 
         @include mobile {
             background-size: cover;
+            padding: 54px 0 0 0;
         }
 
     }
@@ -25,16 +25,18 @@
 
         @include desktop {
             align-items: center;
-            justify-content:flex-start;
+            justify-content: space-between;
             min-height: 448px;
         }
 
         @include tablet {
             flex-direction: column;
+            align-items: center;
         }
 
         @include mobile {
             flex-direction: column;
+            align-items: center;
         }
 
     }
@@ -46,14 +48,12 @@
 
         @include desktop {
             width: 360px;
-            margin: 0 223px 0 0;
         }
 
         @include tablet {
-            width: 360px;
-            margin: 0;
             padding: 54px 0 0 0;
             margin: 0 0 48px 0;
+            width: 47%;
         }
 
         @include mobile {
@@ -166,11 +166,11 @@
     
     &__subscribe_button-theme:active {
         transform: scale(0.9);
-     }
+    }
     
-     &__subscribe_button-theme:hover {
+    &__subscribe_button-theme:hover {
         opacity: 0.5;
-     }
+    }
     
     &__bottom_background_theme {
         min-height: 80px;

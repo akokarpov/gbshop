@@ -52,23 +52,23 @@
     &__card_wrapper {
 
         @include desktop {
-            width: 360px;
+            width: 31.5%;
             min-height: 581px;
             margin: 0 0 30px;
         }
     
         @include tablet {
+            width: 47%;
             margin: 0 0 15px;
         }
     
         @include mobile {
+            width: 100%;
             margin: 0 0 15px;
         }
 
-
         display: flex;
         flex-direction: column;
-        position: relative;
     }
     
     &__card_wrapper:hover
@@ -78,36 +78,30 @@
     
     &__card_wrapper:hover
     &__card_button {
-        display: block;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__overlay-box {
+        position: relative;
     }
     
     &_card_overlay::before {
         content: "";
-        width: 360px;
-        min-height: 420px;
+        width: 100%;
+        min-height: 100%;
         background: $overlay-color;
         position: absolute;
         display: none;
+        z-index: 1;
+        top: 0px;
     }
 
     &__image {
         display: block;
-
-        @include desktop {
-            width: 100%;
-            height: auto;
-        }
-
-        @include tablet {
-            width: 100%;
-            height: auto;
-        }
-
-        @include mobile {
-            width: 100%;
-            height: auto;
-        }
-        
+        width: 100%;
+        height: auto;  
     }
     
     &__card_button {
@@ -125,15 +119,16 @@
         font-family: Lato;
         @include font(14px, 17px, 700);
         position: absolute;
-        top: 35%;
+        top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
         display: none;
         text-align: center;
         padding-left: 40px;
         outline: none;
+        z-index: 2;
     }
-    
+
     &__card_content_wrapper {
         display: flex;
         flex-direction: column;

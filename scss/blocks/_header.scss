@@ -33,6 +33,10 @@
         border-bottom: 2px solid $dark-pink;
     }
 
+    &__search-input:hover {
+        border-bottom: 2px solid $dark-pink;
+    }
+
     :focus::-webkit-input-placeholder {
         color: transparent;
     }

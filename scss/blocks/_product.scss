@@ -1,0 +1,189 @@
+.product {
+
+    &-banner {
+        background-color: $registration-back;
+    }
+
+    &-banner__theme {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        min-height: 148px;
+        box-sizing: border-box;
+
+        @include mobile {
+            flex-direction: column;
+            padding: 24px 0 46px 0;
+        }
+    }
+
+    &-banner-heading {
+        @include font(24px, 29px);
+        color: $dark-pink;
+        text-transform: uppercase;
+
+        @include mobile {
+            margin: 0 0 32px 0;
+        }
+    }
+
+    &__navigation-text {
+        display: inline;
+        text-transform: uppercase;
+        @include font (14px, 17px, 300);
+        color: $light-gray;
+    }
+
+    &__navigation-text+&__navigation-text::before {
+        padding: 0 3px;
+        content: "/\00a0";
+    }
+
+    &__navigation-link {
+        text-decoration: none;
+        color: $light-gray;
+    }
+
+    &__navigation-link:hover {
+        color: $dark-pink;
+        @include font (14px, 17px, 700);
+    }
+
+    &-card {
+        position: relative;
+        background-color: $white;
+        min-height: 600px;
+        border: 1px solid $nav-text-gray;
+        margin: -50px auto 129px auto;
+        text-align: center;
+        z-index: 1;
+
+        @include desktop {
+            padding: 65px 19%;
+        }
+
+        @include tablet {
+            padding: 65px 19% 78px;
+        }
+
+        @include mobile {
+            padding: 65px 23px 78px;
+        }
+    }
+
+    &__collection-heading {
+        @include font (14px, 17px, 300);
+        color: $dark-pink;
+        text-transform: uppercase;
+        position: relative;
+        padding-bottom: 12px;
+        margin-bottom: 12px;
+    }
+
+    &__collection-heading::after {
+        content: "";
+        border-bottom: $dark-pink solid 3px;
+        bottom: 0;
+        display: block;
+        left: 50%;
+        position: absolute;
+        transform: translate(-50%,0);
+        width: 63px;
+    }
+
+    &__collection-name {
+        @include font (18px, 22px, 300);
+        color: $nav-text-gray;
+        text-transform: uppercase;
+        margin: 0 0 48px 0;
+    }
+
+    &__collection-text {
+        @include font (14px, 17px, 300);
+        color: $nav-text-gray;
+        margin: 0 0 32px 0;
+    }
+
+    &__collection-price {
+        @include font (24px, 29px, 300);
+        color: $dark-pink;
+        text-transform: uppercase;
+        margin: 0 0 130px 0;
+    }
+
+    &__button {   
+        height: 42px;
+        content: "";
+        width: 211px;
+        border-radius: 0px;
+        background-color: transparent;
+        border: 1px solid $dark-pink;
+        color: $dark-pink;
+        text-transform: capitalize;
+        @include font(14px, 25px, 700);
+        text-align: left;
+        outline: none;
+        z-index: 2;
+        display: block;
+        margin: 48px auto 0 auto;
+    }
+
+    &__button:active {
+        transform: scale(0.9);
+    }
+
+    &-cards {
+        margin: 0 auto 128px auto;
+        min-height: 581px;
+
+        @include mobile {
+            margin: 0 auto 64px auto;
+        }
+    }
+
+    &__image {
+        display: block;
+        width: 100%;
+        height: auto;  
+    }
+
+    &-cards__wrapper {
+        background-color: #F8F8F8;
+        padding: 20px 28px 16px;
+    }
+
+    &-cards__title {
+        @include font(13px, 16px);
+        text-transform: uppercase;
+        color: $black;
+        margin: 0 0 12px 0;
+    }
+
+    &-cards__text {
+        @include font(14px, 17px, 300);
+        color: $light-gray;
+        margin: 0 0 18px 0;
+    }
+
+    &-cards__price {
+        @include font(16px, 19px, 400);
+        color: $dark-pink;
+    }
+}
+
+.img_hidden-tablet {
+    @include tablet {
+        display: none;
+    }
+}
+
+.img_hidden-mobile {
+    @include mobile {
+        display: none;
+    }
+}
+
+.fa-cart-img {
+    padding: 0 25px;
+    font-size: 25px;
+}
