@@ -53,6 +53,20 @@ table {
   border-spacing: 0;
 }
 
+@font-face {
+  font-family: "Lato";
+  src: url("../fonts/lato-light.woff2") format("woff2"), url("../fonts/lato-light.woff") format("woff");
+  font-style: normal;
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: "Lato";
+  src: url("../fonts/lato-bold.woff2") format("woff2"), url("../fonts/lato-bold.woff") format("woff");
+  font-style: normal;
+  font-weight: 700;
+}
+
 body {
   font-family: "Lato", "Arial", "sans-serif";
   font-style: normal;
