@@ -4,7 +4,7 @@
         background-color: $registration-back;
     }
 
-    &-banner-theme {
+    &__banner-theme {
         min-height: 148px;
         display: flex;
         flex-direction: column;
@@ -15,13 +15,13 @@
         }
     }
     
-    &-heading {
+    &__banner-heading {
         @include font(24px, 29px);
         color: $dark-pink;
         text-transform: uppercase;
     }
 
-    &-theme {
+    &-flexbox {
         display: flex;
         margin: 96px auto 129px auto;
 
@@ -38,7 +38,7 @@
         }
     }
 
-    &__left_column {
+    &__column {
 
         @include desktop {
             margin: 0 128px 0 0;
