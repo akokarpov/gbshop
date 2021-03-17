@@ -1,6 +1,6 @@
 .products {
 
-    &__header_wrapper {
+    &__header-wrapper {
 
         @include desktop {
             margin: 0 0 41px;
@@ -20,12 +20,12 @@
         align-items: center;
     }
     
-    &__header_title {
+    &__header-title {
         @include font(30px, 36px);
         color: $dark-blue;
     }
     
-    &__header_text {
+    &__header-text {
         @include font(14px, 17px);
         color: $light-gray;
     }
@@ -49,7 +49,7 @@
         justify-content: space-between;
     }
     
-    &__card_wrapper {
+    &__card-wrapper {
 
         @include desktop {
             width: 31.5%;
@@ -69,15 +69,16 @@
 
         display: flex;
         flex-direction: column;
+        position: relative;
     }
     
-    &__card_wrapper:hover
-    &_card_overlay::before {
+    &__card-wrapper:hover
+    &__card-overlay::before {
         display: block;
     }
     
-    &__card_wrapper:hover
-    &__card_button {
+    &__card-wrapper:hover
+    &__card-button {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -87,7 +88,7 @@
         position: relative;
     }
     
-    &_card_overlay::before {
+    &__card-overlay::before {
         content: "";
         width: 100%;
         min-height: 100%;
@@ -104,7 +105,7 @@
         height: auto;  
     }
     
-    &__card_button {
+    &__card-button {
         background-image: url(../img/product_to-cart.svg);
         background-repeat: no-repeat;
         background-position: 10px;    
@@ -129,7 +130,11 @@
         z-index: 2;
     }
 
-    &__card_content_wrapper {
+    &__card-button:active {
+        transform: translate(-50%, -50%) scale(0.9);
+    }
+
+    &__card-content-wrapper {
         display: flex;
         flex-direction: column;
         justify-content: space-around;
@@ -138,27 +143,22 @@
         padding: 20px 28px 16px;
     }
     
-    &__card_title {
+    &__card-title {
         @include font(13px, 16px);
         text-transform: uppercase;
         color: $black;
     }
     
-    &__card_text {
+    &__card-text {
         @include font(14px, 17px, 300);
         color: $light-gray;
     }
     
-    &__card_price {
+    &__card-price {
         color: $dark-pink;
     }
     
-    &__button_flex {
-        display: flex;
-        justify-content: center;
-    }
-    
-    &__button_theme {
+    &__button {
         @include font(16px, 47px);
         width: 211px;
         border-radius: 0px;
@@ -167,21 +167,21 @@
         color: $dark-pink;
         text-transform: capitalize;
         font-family: Lato;
-        margin: 0 0 95.5px 0;
+        margin: 0 auto 95.5px auto;
         padding: 0;
         outline: 0;
+        display: block;
 
         @include mobile {
-            margin: 0 0 110px 0;
+            margin: 0 auto 110px auto;
         }
-
     }
     
-    &__button_theme:active {
+    &__button:active {
         transform: scale(0.9);
-     }
+    }
     
-    &__button_theme:hover {
+    &__button:hover {
         background-color: $dark-pink;
         border: 1px solid $dark-pink;
         color: $white;

@@ -172,13 +172,13 @@
         opacity: 0.5;
     }
     
-    &__bottom_background_theme {
+    &__bottom_theme {
         min-height: 80px;
         background-color: $dark-blue;
         color: $gray;
     }
     
-    &__bottom_flex {
+    &__bottom_flexbox {
         display: flex;
         justify-content: space-between;
 
@@ -206,7 +206,7 @@
         align-items: center;
     }
     
-    &__icon_container {
+    &__link {
         background-color: $white;
         width: 32px;
         height: 32px;
@@ -216,20 +216,20 @@
         color: $black;
     }
     
-    &__icon_container:hover {
+    &__link:hover {
         background-color: $dark-pink;
         color: $white;
     }
     
-    &_icon {
+    &__icon {
         position: absolute;
-        top:50%;
-        left:50%;
+        top: 50%;
+        left: 50%;
         transform: translate(-50%, -50%);
         fill: currentColor;
     }
     
-    &_icon_container_pinterest {
+    &__link_pinterest {
         margin: 0;
     }
 }
