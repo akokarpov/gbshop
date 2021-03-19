@@ -27,24 +27,24 @@
         }
     }
 
-    &__navigation-text {
+    &-breadcrumbs__text {
         display: inline;
         text-transform: uppercase;
         @include font (14px, 17px, 300);
         color: $light-gray;
     }
 
-    &__navigation-text+&__navigation-text::before {
+    &-breadcrumbs__text+&-breadcrumbs__text::before {
         padding: 0 3px;
         content: "/\00a0";
     }
 
-    &__navigation-link {
+    &-breadcrumbs__link {
         text-decoration: none;
         color: $light-gray;
     }
 
-    &__navigation-link:hover {
+    &-breadcrumbs__link:hover {
         color: $dark-pink;
         @include font (14px, 17px, 700);
     }
@@ -71,16 +71,16 @@
         }
     }
 
-    &__collection-heading {
+    &-card__heading {
         @include font (14px, 17px, 300);
         color: $dark-pink;
         text-transform: uppercase;
         position: relative;
         padding-bottom: 12px;
-        margin-bottom: 12px;
+        margin: 0 0 12px 0;
     }
 
-    &__collection-heading::after {
+    &-card__heading::after {
         content: "";
         border-bottom: $dark-pink solid 3px;
         bottom: 0;
@@ -91,20 +91,20 @@
         width: 63px;
     }
 
-    &__collection-name {
+    &-card__name {
         @include font (18px, 22px, 300);
         color: $nav-text-gray;
         text-transform: uppercase;
         margin: 0 0 48px 0;
     }
 
-    &__collection-text {
+    &-card__text {
         @include font (14px, 17px, 300);
         color: $nav-text-gray;
         margin: 0 0 32px 0;
     }
 
-    &__collection-price {
+    &-card__price {
         @include font (24px, 29px, 300);
         color: $dark-pink;
         text-transform: uppercase;
