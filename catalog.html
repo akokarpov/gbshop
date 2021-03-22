@@ -37,7 +37,7 @@
                     <input class="header__search-input" type="search" placeholder="Поиск!" id="header__search">
                 </div>
                 <div class="header__controls">
-                    <button class="header__button" id="menu_button">
+                    <button class="header__button" id="menu_button" type="button">
                         <svg class="header__menu header__menu_fill-color" width="32" height="23" viewBox="0 0 32 23"
                             fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M0 23V20.31H32V23H0ZM0 12.76V10.07H32V12.76H0ZM0 2.69V0H32V2.69H0Z" />
@@ -103,7 +103,7 @@
         <div class="header__nav-overlay" id="nav_overlay"></div>
     </header>
     <main class="catalog-main">
-        <section class="catalog-banner">
+        <nav class="catalog-banner">
             <div class="catalog-banner__theme container">
                 <h1 class="catalog-banner-heading">new arrivals</h1>
                 <ul class="catalog-breadcrumbs">
@@ -114,7 +114,7 @@
                     </li>
                 </ul>
             </div>
-        </section>
+        </nav>
         <section class="catalog-dropdown-bar container">
             <h2 class="catalog-dropdown-bar visually-hidden">Dropdown</h2>
             <div class="catalog-filter">
@@ -164,21 +164,21 @@
             </div>
             <div class="catalog-dropdowns-wrapper">
                 <div class="dropdown">
-                    <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" id="dropdownMenuButton1"
+                    <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" id="dropdownMenuButton01"
                         data-bs-toggle="dropdown" aria-expanded="false">
                         trending now
                     </button>
-                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton01">
                         <li><a class="dropdown-item" href="#">selection_01</a></li>
                         <li><a class="dropdown-item" href="#">selection_02</a></li>
                         <li><a class="dropdown-item" href="#">selection_03</a></li>
                     </ul>
                 </div>
                 <div class="dropdown">
-                    <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" id="dropdownMenuButton1"
+                    <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" id="dropdownMenuButton02"
                         data-bs-toggle="dropdown" aria-expanded="false">size
                     </button>
-                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton02">
                         <li><a class="dropdown-item" href="#">xl</a></li>
                         <li><a class="dropdown-item" href="#">s</a></li>
                         <li><a class="dropdown-item" href="#">m</a></li>
@@ -186,11 +186,11 @@
                     </ul>
                 </div>
                 <div class="dropdown">
-                    <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" id="dropdownMenuButton1"
+                    <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" id="dropdownMenuButton03"
                         data-bs-toggle="dropdown" aria-expanded="false">
                         price
                     </button>
-                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton03">
                         <li><a class="dropdown-item" href="#">$100</a></li>
                         <li><a class="dropdown-item" href="#">$150</a></li>
                         <li><a class="dropdown-item" href="#">$200</a></li>
@@ -201,7 +201,7 @@
         <section class="catalog-products container">
             <h2 class="catalog-products visually-hidden">Products</h2>
             <ul class="catalog-products-wrapper">
-                <li class="catalog-products__item-01">
+                <li class="catalog-products__item catalog-products__item_01">
                     <img class="catalog-products__image" src="./img/featured_man_01.jpg" alt="featured_man_01" width="360"
                         height="420">
                     <h3 class="catalog-products__card-title">ellery x m'o capsule</h3>
@@ -211,7 +211,7 @@
                         teams up with Moda Operandi.</p>
                     <p class="catalog-products__card-price">$52.00</p>
                 </li>
-                <li class="catalog-products__item-02">
+                <li class="catalog-products__item catalog-products__item_02">
                     <img class="catalog-products__image" src="./img/man_shirt_bottom.jpg" alt="featured_woman_01" width="360"
                         height="420">
                     <h3 class="catalog-products__card-title">ellery x m'o capsule</h3>
@@ -221,7 +221,7 @@
                         teams up with Moda Operandi.</p>
                     <p class="catalog-products__card-price">$52.00</p>
                 </li>
-                <li class="catalog-products__item-03">
+                <li class="catalog-products__item catalog-products__item_03">
                     <img class="catalog-products__image" src="./img/featured_kid.jpg" alt="featured_kid" width="360"
                         height="420">
                     <h3 class="catalog-products__card-title">ellery x m'o capsule</h3>
@@ -231,7 +231,7 @@
                         teams up with Moda Operandi.</p>
                     <p class="catalog-products__card-price">$52.00</p>
                 </li>
-                <li class="catalog-products__item-04">
+                <li class="catalog-products__item catalog-products__item_04">
                     <img class="catalog-products__image" src="./img/featured_man_02.jpg" alt="featured_kid" width="360"
                         height="420">
                     <h3 class="catalog-products__card-title">ellery x m'o capsule</h3>
@@ -241,7 +241,7 @@
                         teams up with Moda Operandi.</p>
                     <p class="catalog-products__card-price">$52.00</p>
                 </li>
-                <li class="catalog-products__item-05">
+                <li class="catalog-products__item catalog-products__item_05">
                     <img class="catalog-products__image" src="./img/men_item_02.jpg" alt="men_item_02" width="360" height="420">
                     <h3 class="catalog-products__card-title">ellery x m'o capsule</h3>
                     <p class="catalog-products__card-text">Known for her sculptural takes on traditional
@@ -250,7 +250,7 @@
                         teams up with Moda Operandi.</p>
                     <p class="catalog-products__card-price">$52.00</p>
                 </li>
-                <li class="catalog-products__item-06">
+                <li class="catalog-products__item catalog-products__item_06">
                     <img class="catalog-products__image" src="./img/men_item_03.jpg" alt="men_item_03" width="360" height="420">
                     <h3 class="catalog-products__card-title">ellery x m'o capsule</h3>
                     <p class="catalog-products__card-text">Known for her sculptural takes on traditional
@@ -259,7 +259,7 @@
                         teams up with Moda Operandi.</p>
                     <p class="catalog-products__card-price">$52.00</p>
                 </li>
-                <li class="catalog-products__item-07">
+                <li class="catalog-products__item catalog-products__item_07">
                     <img class="catalog-products__image" src="./img/men_item_04.jpg" alt="men_item_04" width="360" height="420">
                     <h3 class="catalog-products__card-title">ellery x m'o capsule</h3>
                     <p class="catalog-products__card-text">Known for her sculptural takes on traditional
@@ -268,7 +268,7 @@
                         teams up with Moda Operandi.</p>
                     <p class="catalog-products__card-price">$52.00</p>
                 </li>
-                <li class="catalog-products__item-08">
+                <li class="catalog-products__item catalog-products__item_08">
                     <img class="catalog-products__image" src="./img/men_item_05.jpg" alt="men_item_05" width="360" height="420">
                     <h3 class="catalog-products__card-title">ellery x m'o capsule</h3>
                     <p class="catalog-products__card-text">Known for her sculptural takes on traditional
@@ -277,7 +277,7 @@
                         teams up with Moda Operandi.</p>
                     <p class="catalog-products__card-price">$52.00</p>
                 </li>
-                <li class="catalog-products__item-09">
+                <li class="catalog-products__item catalog-products__item_09">
                     <img class="catalog-products__image" src="./img/men_item_06.jpg" alt="men_item_06" width="360" height="420">
                     <h3 class="catalog-products__card-title">ellery x m'o capsule</h3>
                     <p class="catalog-products__card-text">Known for her sculptural takes on traditional

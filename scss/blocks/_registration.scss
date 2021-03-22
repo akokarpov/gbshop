@@ -110,7 +110,7 @@
         border: 1px solid $dark-pink;
     }
     
-    &__radio-input:checked+&_radio_label::before {
+    &__radio-input:checked+&__radio-label::before {
         background-image: url(../img/checked.svg);
         background-repeat: no-repeat;
         background-position: center center;
