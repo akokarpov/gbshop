@@ -140,7 +140,7 @@
     &-filter-menu {
         position: absolute;
         display: none;
-        min-height: 531px;
+        min-height: 200px;
         width: 360px;
         box-shadow: 6px 4px 35px $card-shadow;
         padding: 13px 0 17px 17px;
@@ -148,6 +148,14 @@
         left: 0;
         top: 0;
         z-index: 1;
+
+        &__list_first {
+            display: none;
+        }
+        
+        &__list_first:hover {
+            display: block;
+        }
 
         &__title {
             text-transform: uppercase;
@@ -166,6 +174,10 @@
             &_last {
                 margin: 0;
             }
+        }
+
+        &__title_first:active+&__list_first {
+            display: block;
         }
 
         &__item {

@@ -2479,7 +2479,7 @@ body {
 .catalog-filter-menu {
   position: absolute;
   display: none;
-  min-height: 531px;
+  min-height: 200px;
   width: 360px;
   box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.13);
   padding: 13px 0 17px 17px;
@@ -2487,6 +2487,14 @@ body {
   left: 0;
   top: 0;
   z-index: 1;
+}
+
+.catalog-filter-menu__list_first {
+  display: none;
+}
+
+.catalog-filter-menu__list_first:hover {
+  display: block;
 }
 
 .catalog-filter-menu__title {
@@ -2509,6 +2517,10 @@ body {
 
 .catalog-filter-menu__title_last {
   margin: 0;
+}
+
+.catalog-filter-menu__title_first:active + .catalog-filter-menu__list_first {
+  display: block;
 }
 
 .catalog-filter-menu__item {
